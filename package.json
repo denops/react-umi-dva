@@ -1,0 +1,22 @@
+{
+  "name": "react04",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ant-design-pro": "^2.2.1",
+    "antd": "^3.12.4",
+    "axios": "^0.18.0",
+    "dva": "^2.4.1",
+    "nprogress": "^0.2.0",
+    "umi": "^2.4.3",
+    "umi-plugin-react": "^1.4.1"
+  }
+}
