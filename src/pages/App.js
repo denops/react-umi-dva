@@ -24,11 +24,20 @@ export default class App extends React.Component{
         }
     }
     componentDidMount(){
-        this.setState({
-            tags:this.props.tags,
-            displayCourses:this.props.all
-        })
+       
        this.getList()
+       this.load()
+    }
+    load(){
+
+        setTimeout(()=>{
+            this.setState({
+                tags:this.props.tags,
+                displayCourses:this.props.all
+            })
+
+            console.log(this.props.all)
+        },2000)
     }
     getList(){
         this.props.dispatch({
@@ -65,7 +74,7 @@ export default class App extends React.Component{
                 {this.state.displayCourses.map(item=>{
                    return <Col style={{padding:10}} span={4} key={item.name}>
                                <Card title={item.name} cover={<img src={'/course/'+item.img} />} >
-                                <div>{item.price}</div>
+                                <div>￥{item.price}</div>
                                 <div>{item.solded}</div>
                                </Card> 
                           </Col>
